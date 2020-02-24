@@ -1,24 +1,24 @@
 import React, { Component, useLayoutEffect } from "react"
 import ServerListItem from './ServerListItem'
+import SearchForm from './SearchForm'
 import { connect } from "react-redux"
-import { getServers } from "../actions/index"
-// import serverList from '../db.json';
+import { getServers, getFilteredServers } from "../actions/index"
 
 class ServerList extends Component {
 
   componentDidMount () {
-    console.log("aaa")
-    console.log(this.props.getServers())
-    // dispatch(getServers())
     this.props.getServers()
   }
 
   render () {
-
-    console.log("propsaaa", this.props.servers)
-    // const serverList = this.props.servers.map(item => (<ServerListItem />))
+    const  GetFilteredServers = (e) => {
+      console.log("e", e.target.value)
+      this.props.getFilteredServers(e.target.value)
+    }
     return (
       <React.Fragment>
+        {/* <SearchForm GetFilteredServers={() => GetFilteredServers()} /> */}
+        <input type="text" onChange={GetFilteredServers}></input>
         {this.props.servers.map(item => (<ServerListItem item={item} key={item.id} />))}
       </React.Fragment>
     )
@@ -27,6 +27,6 @@ class ServerList extends Component {
 
 const mapStateToProps = state => ({ servers: state.servers })
 
-const mapDispatchToProps = ({ getServers })
+const mapDispatchToProps = ({ getServers, getFilteredServers })
 
 export default connect(mapStateToProps, mapDispatchToProps)(ServerList)

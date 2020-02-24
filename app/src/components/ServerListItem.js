@@ -1,7 +1,12 @@
 import React from 'react'
 
 const ServerListItem = (props) => {
-  return (<div>{props.item.host} {props.item.name}</div>)
+  const link = "https://" + props.item.host
+  return (
+    <div>
+      <span>{props.item.host}</span><a href={link} target="blank">{props.item.name}</a>
+    </div>
+  )
 }
 
 export default ServerListItem

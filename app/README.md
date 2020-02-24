@@ -1,3 +1,13 @@
+## Start Development
+
+```
+docker-compose run node sh
+cd app
+yarn install
+exit
+docker-compose up
+```
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts

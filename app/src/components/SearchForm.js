@@ -1,9 +1,15 @@
 import React from "react"
 
-const SearchForm = () => {
+const SearchForm = ({GetFilteredServers}) => {
   console.log("aaa")
+
+  // const GetFilteredServers = (e) => {
+  //   console.log("e", e.target.value)
+  //   this.props.getFilteredServers(e.target.value)
+  // }
+
   return (
-    <div>aaaaaaaa</div>
+    <input type="text" onChange={GetFilteredServers} ></input>
   )
 }
 
