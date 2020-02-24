@@ -1,0 +1,39 @@
+{
+  "servers": [
+    {
+      "id": 1,
+      "host": "smp2-2.pitdesign.jp",
+      "name": "関西スーパー高石駅前",
+      "localip": "111.222.111.222",
+      "port": "33061"
+    },
+    {
+      "id": 2,
+      "host": "smp2-3.pitdesign.jp",
+      "name": "ロイヤルホスト屏風浦",
+      "localip": "111.222.111.222",
+      "port": "33061"
+    },
+    {
+      "id": 3,
+      "host": "smp2-4.pitdesign.jp",
+      "name": "西友町田",
+      "localip": "111.222.111.222",
+      "port": "33061"
+    },
+    {
+      "id": 4,
+      "host": "smp2-5.pitdesign.jp",
+      "name": "フォルテ蘇我",
+      "localip": "111.222.111.222",
+      "port": "33061"
+    },
+    {
+      "id": 5,
+      "host": "smp2-5.pitdesign.jp",
+      "name": "イオン相模原",
+      "localip": "111.222.111.222",
+      "port": "33061"
+    }
+  ]
+}

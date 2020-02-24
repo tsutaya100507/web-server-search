@@ -1,0 +1,23 @@
+version: '3'
+services:
+  node:
+    build:
+      context: .
+      dockerfile: Dockerfile_node
+    volumes:
+      - ./:/usr/src/app
+    container_name: react
+    command: sh -c "cd app && yarn start"
+    ports:
+      - "3000:3000"
+  json-server:
+    build:
+      context: .
+      dockerfile: Dockerfile_jsonserver
+    container_name: json-server
+    ports:
+      - '3001:3001'
+    volumes: 
+      - ./db/:/usr/src/app/data/
+      - /usr/src/app/node_modules
+    command: json-server --port 3001 --watch ./data/db.json --host 0.0.0.0
